@@ -24,15 +24,17 @@ public class CREDECRE {
         scan.useDelimiter("\n");
         int n =1;
         while(n!=0){
-            System.out.print("Ingrese el n:");
+            //System.out.print("Ingrese el n:");
             n = scan.nextInt();
              if(n>=9 && n<=24){
                 double dem = 1;
+                //Calcula (n-9)!
                 for (int j=2;j<n-8;j++){
                     dem*=j;
                 }
                 double i = dem;
-                dem=dem*362880;//9!
+                dem=dem*362880;//9!--> Esto es (n-9)!9!
+                //Acá termina de calcular el numerador, n!
                 for(int j=n-8;j<n+1;j++){
                     i*=j;
                 }
